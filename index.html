@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== Header with Logo and Desktop Navigation ========== -->
+  <header>
+    <a href="#" class="logo"><img src="assets/logo.png" alt="Logo"></a>
+    <nav class="desktop-nav">
+      <a href="#" class="nav-link active" data-section="home">Home</a>
+      <a href="#" class="nav-link" data-section="services">Services</a>
+      <a href="#" class="nav-link" data-section="skills">Skills</a>
+      <a href="#" class="nav-link" data-section="education">Education</a>
+      <a href="#" class="nav-link" data-section="experience">Experience</a>
+      <a href="#" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ========== Main Content Area ========== -->
+  <main class="container">
+    <!-- Left Pane: Static Image -->
+    <div class="left-pane">
+      <img src="assets/Image.jpg" alt="Profile Picture" />
+    </div>
+    <!-- Right Pane: Dynamic Text Content + Static Social Icons and Button -->
+    <div class="right-pane">
+      <div class="dynamic-container">
+        <button id="prev" class="arrow-btn">&#8249;</button>
+        <div id="dynamic-content">
+          <!-- Default (Home) dynamic text -->
+          <h1>Hey, It's <span>Yashika</span></h1>
+          <h3>I'm a <span>Web Developer & Graphic Designer</span></h3>
+          <p>
+            Welcome to my portfolio! I specialize in web development, UI design, and creative software solutions.
+          </p>
+        </div>
+        <button id="next" class="arrow-btn">&#8250;</button>
+      </div>
+      <!-- Static Social Icons and Hire Me Button (always visible) -->
+      <div class="static-content">
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/yashika-879527275"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Yashii01"><i class="fa-brands fa-github"></i></a>
+          <a href="https://instagram.com/_itskhushii_001"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <a href="documents/Yashika.pdf" class="btn">View CV</a>
+        <a href="documents/Sample.pdf" class="btn">Sample Work</a> <!-- New Sample Work Button -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== JavaScript ========== -->
+  <script href="js/script.js">
+  </script>
+</body>
+</html>

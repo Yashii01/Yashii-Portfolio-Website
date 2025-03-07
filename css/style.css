@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ========== Header ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo {
+display: inline-block; /* Keep the anchor as an inline-block container */
+cursor: pointer;
+}
+
+.logo img {
+height: 70px; /* Adjust as needed */
+width: auto;
+transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+transform: scale(1.1);
+}
+/* Desktop Navigation */
+nav.desktop-nav {
+  display: flex;
+}
+nav.desktop-nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+nav.desktop-nav a:hover,
+nav.desktop-nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* ========== Main Container ========== */
+.container {
+  padding-top: 100px; /* To avoid header overlap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-pane {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-pane img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #b74b4b;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.left-pane img:hover {
+  transform: scale(1.05);
+}
+.right-pane {
+  flex: 0 0 60%;
+  padding: 2rem;
+}
+
+/* Dynamic Content (text that changes) */
+.dynamic-container {
+  display: flex;
+  align-items: center;
+}
+#dynamic-content {
+  flex: 4;
+}
+#dynamic-content h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+#dynamic-content h3 {
+  font-size: 3.2rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+#dynamic-content p {
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+}
+
+/* Static Content (always visible) */
+.static-content {
+  margin-top: 2rem;
+}
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid #b74b4b;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  transition: 0.3s ease;
+  color: #b74b4b;
+}
+.social-icons a:hover {
+  color: black;
+  background-color: #b74b4b;
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #b74b4b;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: #b74b4b;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #b74b4b;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 20px;
+}
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #b74b4b;
+  color: black;
+  box-shadow: 0 0 25px #b74b4b;
+}
+.btn-sample {
+  background-color: #b74b4b;
+  color: black;
+}
+
+.btn-sample:hover {
+  background-color: black;
+  color: #b74b4b;
+  box-shadow: 0 0 25px #b74b4b;
+}    
+.container  span{
+  color: #b74b4b;
+} 
+
+/* Arrow Buttons for Mobile (initially hidden on desktop) */
+.arrow-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #b74b4b;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 995px) {
+  .container {
+    flex-direction: column;
+    padding-top: 90px;
+  }
+  .left-pane {
+    margin-bottom: 2rem;
+  }
+  .left-pane img {
+    width: 70vw;
+  }
+  .right-pane {
+    padding: 1rem;
+  }
+  /* Hide desktop navigation on mobile */
+  nav.desktop-nav {
+    display: none;
+  }
+  /* Show arrow buttons in mobile view */
+  .arrow-btn {
+    display: block;
+  }
+  /* In mobile, place arrow buttons next to the dynamic content */
+  .dynamic-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .social-icons {
+    
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+  }
+  .logo {
+display: block;       /* make the logo anchor a block element */
+margin: 0 auto;       /* center it horizontally */
+}
+  .logo img {
+   align-content: center;
+   height:60px;
+   width: auto;
+  }
+}
